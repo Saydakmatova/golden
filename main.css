@@ -132,3 +132,7 @@ h1{
 .works img:last-child{
 	float: right;
 }
+.azamat{
+	max-width: 300px;
+	margin-right:10px
+}
