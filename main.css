@@ -134,5 +134,33 @@ h1{
 }
 .azamat{
 	max-width: 300px;
-	margin-right:10px
+	margin-right:10px;
+}
+.js1 h3,p{
+	margin: 0;
+	padding: 0;
+}
+.list{
+	display: flex;
+	flex-direction: column;
+	width: 808px;
+}
+.js1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-start;
+}
+.js1 img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	float: left;
+	padding-bottom: 40px;
+	padding-right: 40px;
+}
+.text{
+	display: block;
+	width: 346px;
+	margin-left: 10px;
 }
