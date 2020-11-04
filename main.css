@@ -21,21 +21,20 @@ header{
 	width: 930px;
 	margin: 0 auto
 }
-.golden{
-	float: left;
-}
 nav{
 	float: right;
 	margin-top: 50px;
+	position: relative;
 }
 .menu{
 	padding: 0;
 	margin:0;
-	display: block; 
+	display: flex;
+	justify-content: center;
+	list-style: none;
+
 }
 .menu li{
-	float: left;
-	display: block;
 	margin-right: 41px;
 	font-size: 14px;
 }
@@ -43,8 +42,54 @@ nav{
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
-
+	position: relative; // и ссылку надо было сделать relative - это очень важно!!!!!
 }
+
+li.dws-li a::before { /*тут ошибка мы анимируем ссылку*/
+	content: "";
+	width: 0px; //тут была ошибка
+	height: 3px;
+	background-color: #ff2117;
+	position: absolute; //это тоже (все глупышка)
+	top: 100%;
+	left: 0%;
+	z-index: 5;
+	transition: .5s;
+	mix-blend-mode: multiply;
+}
+
+	li.dws-li a::after{
+		 content: '';
+		 width: 0px;
+		 height: 3px;
+		 background-color: orange;
+		 position: absolute;
+		 top: 100%;
+		 right: 0;
+		 z-index: 5;
+		 transition: .5s;
+		 mix-blend-mode: multiply;
+	}
+
+li.dws-li:hover {
+	/*background-color: #e5eae8;*/
+}
+
+/* Вот эти тоже были очень важны
+:hover - при наведении изменяем а:before */
+
+li.dws-li:hover a:before{
+ width: 50%;
+ transform: translateX(100%);
+}
+/* тут тоже самое */
+li.dws-li:hover a:after{
+ width: 50%;
+ transform: translateX(-100%);
+}
+
+/*************** ТУТ ЗАКАНЧИВАЕТСЯ МЕНЮ *******************/
+/******** ТУТ начинается остальное (пиши комментарии, чтобы не запутаться) *******/
 .titles__first{
 	font-size: 40px;
 	color: #fff;
