@@ -149,7 +149,7 @@ h1{
 	padding: 0;
 }
 .list{
-	margin-top: 20px;
+	margin-left: 200px;
 	display: flex;
 	flex-direction: column;
 	width: 808px;
