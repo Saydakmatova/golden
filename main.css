@@ -194,7 +194,7 @@ h1{
 	padding: 0;
 }
 .list{
-	margin-left: 200px;
+	margin-left: 0px;
 	display: flex;
 	flex-direction: column;
 	width: 808px;
@@ -211,7 +211,7 @@ h1{
 	justify-content: center;
 	align-self: flex-start;
 	padding-left: 350px;
-	padding-bottom: 20px;
+	padding-bottom:20px;
 	padding-top: 20px;
 }
 .js1 img{
